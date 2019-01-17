@@ -1,0 +1,149 @@
+## 01 UNIX excercise BIOSYS-ANALYTICS 16ene2019
+
+
+## Make a directory (in this directory) called files and download the following files in there:
+## Download the following using their existing filenames (i.e., you will have usdeclar.txt, etc.):
+## https://www.constitution.org/usdeclar.txt
+## https://www.usconstitution.net/const.txt
+
+$ mkdir files
+$ cd files
+$ wget https://www.constitution.org/usdeclar.txt
+--2019-01-16 13:46:31--  https://www.constitution.org/usdeclar.txt
+Resolving www.constitution.org... 52.52.39.236, 52.52.2.146, 52.8.181.78, ...
+Connecting to www.constitution.org|52.52.39.236|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: usdeclar.txt
+
+    [ <=>                                            ] 8,685       --.-K/s   in 0s
+
+2019-01-16 13:46:31 (52.0 MB/s) - usdeclar.txt saved [8685]
+
+$ wget https://www.usconstitution.net/const.txt
+--2019-01-16 13:47:17--  https://www.usconstitution.net/const.txt
+Resolving www.usconstitution.net... 52.52.2.146
+Connecting to www.usconstitution.net|52.52.2.146|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: const.txt
+
+    [ <=>                                            ] 45,119      --.-K/s   in 0.04s
+
+2019-01-16 13:47:17 (1.07 MB/s) - const.txt saved [45119]
+
+[dashpame@login2 files]$ ls
+const.txt  usdeclar.txt
+
+
+## Download https://www.gutenberg.org/files/25344/25344-0.txt as scarlet.txt (in one line, i.e., do not download and then rename -- how can you specify the download filename?)
+
+$ wget https://www.gutenberg.org/files/25344/25344-0.txt -O scarlet.txt
+--2019-01-16 14:40:36--  https://www.gutenberg.org/files/25344/25344-0.txt
+Resolving www.gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to www.gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 525464 (513K) [text/plain]
+Saving to: scarlet.txt
+
+100%[================================================>] 525,464      943K/s   in 0.5s
+
+2019-01-16 14:40:36 (943 KB/s) - scarlet.txt saved [525464/525464]
+
+## Show a long listing of the files
+
+$ ls -l
+total 584
+-rw-r--r-- 1 dashpame staff  45119 Jan 10 12:23 const.txt
+-rw-r--r-- 1 dashpame staff 525464 Jan 23  2015 scarlet.txt
+-rw-r--r-- 1 dashpame staff   8685 Jan  4 14:27 usdeclar.txt
+
+## Show a command to count the number of lines in each file and a total count of all lines
+
+$ wc -l ~/files/*.txt
+   872 /home/u20/dashpame/files/const.txt
+  9120 /home/u20/dashpame/files/scarlet.txt
+   176 /home/u20/dashpame/files/usdeclar.txt
+ 10168 total
+
+## Show a command that will find the files in this directory which are larger than 50k
+
+$ find ~/files/*.txt -size +50k
+/home/u20/dashpame/files/scarlet.txt
+
+## Show a command that will tell you what kind of file that Unix considers const.txt
+
+$ file const.txt
+const.txt: ASCII English text
+
+## Show a single command that will print the MD5 sum of all the text files (without mentioning each file individually)
+
+$ md5sum ~/files/*.txt
+f66a8165c621d48bac2216b2f31e8742  /home/u20/dashpame/files/const.txt
+4958553be1483e4cbd615ce5fa73f6ab  /home/u20/dashpame/files/scarlet.txt
+7f54939b30ae7b6d45d473a4c82a41b0  /home/u20/dashpame/files/usdeclar.txt
+
+## Show the output of a command that will tell you how much disk space in kilobytes (K) is being used
+
+$ df --block-size=1k
+Filesystem               1K-blocks          Used    Available Use% Mounted on
+/dev/sda2                944785812      41959964    854826772   5% /
+none                      98884376             4     98884372   1% /dev/shm
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs1/rsgrps
+                     1543570980864 1194493081600 349077899264  78% /rsgrps
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/pbs
+                       35970351104    6813008896  29157342208  19% /pbs
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/Bright_cm_shared
+                       35970351104    6813008896  29157342208  19% /cm/shared
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs1/bio5
+                        4294967296     410201088   3884766208  10% /bio5
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/unsupported
+                       35970351104    6813008896  29157342208  19% /unsupported
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs3/extra
+                      540897443840   47569390592 493328053248   9% /extra
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs3/xdisk
+                       10737418240             0  10737418240   0% /xdisk
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/home
+                       35970351104    6813008896  29157342208  19% /home
+
+
+## Show a command to count how many lines of text contain the word judge (irrespective of case) in all the files
+
+$ grep -i -c judge ~/files/*.txt
+/home/u20/dashpame/files/const.txt:5
+/home/u20/dashpame/files/scarlet.txt:15
+/home/u20/dashpame/files/usdeclar.txt:2
+ 
+## Show a command that will display only the names of the files that contain the word human
+
+$ grep -l human ~/files/*.txt
+/home/u20/dashpame/files/scarlet.txt
+/home/u20/dashpame/files/usdeclar.txt
+
+## Show a single command that will count the number of times the word scarlet appears in scarlet.txt (case-insensitive); that is, not the number of lines that contain scarlet but each occurrence of the word
+
+$ grep scarlet ~/files/scarlet.txt | wc -w
+1233
+
+## Show a single command that will take the first 15 lines from each file and append them into a new file called foo
+
+$ head -n +15 ~/files/*.txt > foo.txt
+
+## Show a command that shows how many lines are in foo
+
+$ wc -l foo.txt
+52 foo.txt
+
+## You might have expected that the total number of lines in the previous question would be 45 (15 * 3), but it should not be. Why is it more or less?
+
+## Remove the file called foo
+
+rm foo.txt
+
+## Do history add -A files and then commit and push. Ensure you can see your new files on Github.
+
+git add files
+
+git commit -m 'all done' files
+
+

@@ -1,0 +1,143 @@
+    1  cd /rsgrps/bh_class
+    2  $mkdir my-dashpame
+    3  mkdir dashpame
+    4  ls
+    5  mkdir my-netid
+    6  cd .ssh
+    7  cat id_rsa.pub
+    8  cat dashpame_rsa.pub
+    9  catid_rsa.pub
+   10  cat id_rsa.pub
+   11  id-rsa-pub
+   12  cat
+   13  cd .ssh
+   14  cat id_rsa.pub
+   15  cd
+   16  cat id_rsa.pub
+   17  cd ssh
+   18  cd ,ssh
+   19  cd .ssh
+   20  cat id_rsa .pub
+   21  id_rsa.pub
+   22  cat
+   23  cd .ssh
+   24  cat id_rsa .pub
+   25  cat id_rsa.pub
+   26  cd .ssh
+   27  cat id_rsa.pub
+   28  cd
+   29  cd .ssh
+   30  cat id_rsa-
+   31  cat id_rsa.pub
+   32  cd .ssh
+   33  ssh-keygen
+   34  cat id_rsa.pub
+   35  cat.pub
+   36  id_rsa cat.pub
+   37  cat id_rsa cat.pub
+   38  id_rsa cat.pub 
+   39  cat id_rsa cat.pub
+   40  cd/rsgrps/bh_class/dashpame
+   41  cd..
+   42  cd
+   43  /rsgrps/bh_class/dashpame
+   44  cd /rsgrps/bh_class/username
+   45  cd /rsgrps/bh_class/dashpame
+   46  git clone git@github.com:dashpame/biosys-analytics.gt
+   47  ls
+   48  cd .ssh
+   49  cat id_rsa cat.pub
+   50  cd..
+   51  cd
+   52  env
+   53  echo $user
+   54  echo user
+   55  pwd
+   56  cowsay
+   57  ls
+   58  touch foo
+   59  ls foo
+   60  ls -foo
+   61  rm foo
+   62  ls -foo
+   63  ls foo
+   64  ls find --help
+   65  ls
+   66  cd $home
+   67  cd home
+   68  cd HOME
+   69  ls -f
+   70  top
+   71  ps -fu USER
+   72  ps -fu DASHPAME
+   73  ps -fu dashpame
+   74  w
+   75  w > who
+   76  ls -lh who
+   77  cowsay
+   78   echo $PATH
+   79  cd files
+   80  ls
+   81  wc files
+   82  wc const.txt
+   83  wc ~/files/
+   84  wc files
+   85  wc files/*
+   86  pwd
+   87  wc files
+   88  wc ~/files/*.txt
+   89  wc -l ~/files/*.txt
+   90  find --help
+   91  find -size 50k ~/files/
+   92  ~/files/ find -size 50k
+   93  ~/files/*.* find -size 50k
+   94  ~/files/*.* find -size 50
+   95  ~/files/*.txt find -size 50
+   96  wc -l ~/files/*.txt
+   97  find -size 50 ~/files/*.txt
+   98  find ~/files/*.txt -size +50
+   99  find ~/files/*.txt -size +50k
+  100  file const.txt
+  101  md5sum ~/files/*.txt
+  102  df
+  103  df --help
+  104  df -h
+  105  df --block-size=1k
+  106  rep --help
+  107  grep
+  108  grep --help
+  109  grep -c
+  110  grep -c "judge" ~/files/*.txt
+  111  grep -c "JUDGE" ~/files/*.txt
+  112  grep -i -c "JUDGE" ~/files/*.txt
+  113  grep l "human" ~/files/*.txt
+  114  grep -l "human" ~/files/*.txt
+  115  wc --help
+  116  grep --hepl
+  117  grep --help
+  118  niq --help
+  119  uniq --help
+  120  wc --help
+  121  awk --help
+  122  head --help
+  123  head -n=15 ~/files/*.txt > foo.txt
+  124  head -n 15 ~/files/*.txt > foo.txt
+  125  ls
+  126  file foo.txt
+  127  cd foo
+  128  cd foo.txt
+  129  foo.txt
+  130  wc foo.txt
+  131  wc -l
+  132  wc -l foo.txt
+  133  head -n +15 ~/files/*.txt > foo.txt
+  134  wc -l foo.txt
+  135  head foo.txt
+  136  head -n +15 scarlet.txt
+  137  grep "scarlet" ~/files/scarlet.txt | wc 
+  138  wc --help
+  139  grep "scarlet" ~/files/scarlet.txt | wc -w
+  140  wc -l foo.txt
+  141  rm foo.txt
+  142  ls
+  143  history > cmds
