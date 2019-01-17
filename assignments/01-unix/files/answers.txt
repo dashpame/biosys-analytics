@@ -1,5 +1,7 @@
 ## 01 UNIX excercise BIOSYS-ANALYTICS 16ene2019
 
+Hi!
+
 
 ## Make a directory (in this directory) called files and download the following files in there:
 ## Download the following using their existing filenames (i.e., you will have usdeclar.txt, etc.):
